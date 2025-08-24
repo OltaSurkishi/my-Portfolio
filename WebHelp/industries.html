@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Customer Care | Business solutions</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/png;base64,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"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="row static-top">
+      <div
+        class="col-5 col-sm-10 bg-light"
+        style="text-align: end; display: inline-block"
+      >
+        <p class="text-secondary">
+          <i class="fa fa-search text-secondary"></i>
+          Search
+        </p>
+      </div>
+      <div
+        class="col-7 col-sm-2 bg-light"
+        style="text-align: left; display: inline-block"
+      >
+        <ul>
+          <li class="main-menu">
+            <p class="text-secondary px-3">English &darr;</p>
+            <ul class="sub-menu">
+              <li class="text-secondary">Spanish &rarr;</li>
+              <li class="text-secondary">Albanian &rarr;</li>
+              <li class="text-secondary">Italian &rarr;</li>
+              <li class="text-secondary">Portugese &rarr;</li>
+              <li class="text-secondary">Turkish &rarr;</li>
+              <li class="text-secondary">French &rarr;</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white static">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="https://media.webhelp.com/wp-content/uploads/2023/09/25113735/logo-concentrix-webhelp.svg"
+              alt="..."
+              height="36"
+              style="margin-right: 30px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active main-menu"
+                  aria-current="page"
+                  href="services.html"
+                  >SERVICES</a
+                >
+                <ul>
+                  <li class="sub-menu">Webhelp Services</li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="industries.html">INDUSTRIES</a>
+              </li>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">INSIGHTS</a>
+                  <!-- Sub-menu for INSIGHTS -->
+                  <ul class="sub-menu">
+                    <li class="li-1"><a href="#">&#x2192; News & Articles</a></li>
+                    <li><a href="#">&#x2192; Analyst Recognition and Awards</a></li>
+                    <li><a href="#">&#x2192; Case Studies</a></li>
+                    <!-- Add more sub-menu items as needed -->
+                  </ul>
+                </li>
+                <!-- Add more navigation items as needed -->
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT US</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+            style="margin-left: 100px"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item-1">
+                <a
+                  class="nav-link btn rounded-pill mx-2 pr-4 pl-4"
+                  href="#"
+                  style="
+                    background-color: darkblue;
+                    color: white;
+                    font-weight: bold;
+                  "
+                  >Careers</a
+                >
+              </li>
+              <li class="nav-item-2">
+                <a
+                  class="nav-link btn rounded-pill mx-2 pr-4 pl-4"
+                  href="#"
+                  style="
+                    background-color: #d90166;
+                    color: white;
+                    font-weight: bold;
+                  "
+                  >Let's talk</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-12">
+        <h1 class="h1-text-10">Your industry.</h1>
+      </div>
+      <div class="col-12 col-sm-12">
+        <h1 class="h1-text-11">Our expertise.</h1>
+      </div>
+      <div class="col-12 col-sm-12">
+        <p class="p-text-21">
+          One size never fits all. Understanding your sector and your business
+          helps us tailor <br />
+          our approach to meet your needs.
+        </p>
+        <!-- @media -->
+        <p class="p-text-22">
+          One size never fits all. Understanding your sector and
+           your business
+          helps us tailor
+          our approach to meet your needs.
+        </p>
+        <!-- @media -->
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12 col-sm-2 custom-box-1">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/2962/2962303.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Automotive & Mobility</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/4205/4205570.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Travel & Leisure</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/3116/3116564.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Retail & E-commerce</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/114/114910.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Financial Services</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 col-sm-2 custom-box-1">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/90/90904.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Hightech & Media</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/399/399696.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Fashion & Luxury</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/3891/3891977.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Telecommunications</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/12892/12892011.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Utilities & Public Services</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 col-sm-2 custom-box-1">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/809/809957.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Healthcare</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-2 custom-box">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/4738/4738879.png"
+          alt="Image"
+          class="box-image"
+        />
+        <div class="box-text">
+          <p>Gaming Support</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5 bg-color-2">
+      <h1 class="h1-text-12 col-12 col-sm-12 mt-5 mb-4">
+        Our Latest News
+      </h1>
+      <div class="col-12 col-sm-4">
+        <div class="card-2">
+          <img class="card-img-top img-10" src="images/fashion-webhelp.png" alt="Card image" />
+          <div class="card-body-2">
+            <h4 class="card-title-5 pt-3 pl-3" style="color: #013d62;">
+              [Fashion] Chossing the right <br>
+              partners to frow your <br>
+              business in 2024, at a time <br>
+              when trust is fragile
+            </h4>
+            <p class="gray-p-text pt-3 pl-3" style="color: gray;">
+              Do you work in fashion? Do you go to <br>
+              Europe's big showrooms in Paris, Milan, <br>
+              London or Munich? So do [...]
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-3">
+          <img class="card-img-top img-10" src="images/key-takeaways.jpg" alt="Card image" />
+          <div class="card-body-2">
+            <h4 class="card-title-5 pt-3 pl-3" style="color: #013d62;">
+              Key takeaways: what we <br>
+              discussed in our recent Trust <br>
+              & Safety meet-up
+            </h4>
+            <p class="gray-p-text pt-3 pl-3" style="color: gray;">
+              We held our dirst Trust and Safety,<br>
+              meet-up for European professionals <br>
+              recently in Concentrix + Webhelp's offices. Our array[...]
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-4">
+          <img class="card-img-top img-10" src="images/web-help.png" alt="Card image" />
+          <div class="card-body-2">
+            <h4 class="card-title-5 pt-3 pl-3" style="color: #013d62;">
+              Get the insider's view: key <br>
+              takeaways on the future for <br>
+              AI and tech in travel CX
+            </h4>
+            <p class="gray-p-text pt-3 pl-3" style="color: gray;">
+              Following on form our recent exslusive <br>
+              Digital Travel Dinner, we hosted a <br>
+              roundtable discussion in the UK featuring a <br>
+              hand-picked[...]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5 bg-color bg-radius">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h1 style="color: white" class="get-in-touch-2">Get in Touch</h1>
+          <p style="color: white" class="p-text-11">
+            We'd really like to help out. Fancy working together or just <br />
+            want to say hi? Drop us a message
+          </p>
+          <div>
+            <div class="form-check form-border text-white">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Business Solutions
+              </label>
+            </div>
+            <div class="form-check form-border text-white">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                HR Enquiries & Career Opportunities
+              </label>
+            </div>
+            <div class="form-check form-border text-white">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Media & Analyst Enquiries
+              </label>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn rounded-pill continue pr-4 pl-4 mt-5 ml-4"
+            style="background-color: #d90166; color: white"
+          >
+            Continue
+          </button>
+        </div>
+        <div class="col-12 col-sm-6">
+          <img
+            class="tablet-girl"
+            width="555px"
+            src="https://media.webhelp.com/wp-content/uploads/2022/11/02232843/contact-form-image.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row bg-color-1 mt-5">
+        <div class="col-12 col-sm-3">
+          <p class="p-text-12 text-white">About us</p>
+          <a href="#" class="a-href-1"> What we do </a>
+          <a href="#" class="a-href-1">
+            Webhelp in your <br />
+            region
+          </a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <p class="p-text-13 text-white">Discover</p>
+          <a href="#" class="a-href-2">All industries</a>
+          <a href="#" class="a-href-2">Our solutions</a>
+          <a href="#" class="a-href-2">News</a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <p class="p-text-14 text-white">Career</p>
+          <a href="#" class="a-href-3">Job search</a>
+          <a href="#" class="a-href-3">Work aboard</a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <p class="p-text-15 text-white">Community</p>
+          <a href="#" class="a-href-4">Contact us</a>
+        </div>
+        <div class="col-12">
+          <p class="p-text-16 text-white mt-5">
+            Subscribe to receive our newsletter
+          </p>
+        </div>
+        <form>
+          <div class="row form-margin">
+            <div class="col-12 col-sm-4 form-group text-white">
+              <label for="firstName">*First Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                style="background-color: grey; border-color: black"
+              />
+            </div>
+            <div class="col-12 col-sm-4 form-group text-white">
+              <label for="lastName">*Last Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                style="background-color: grey; border-color: black"
+              />
+            </div>
+            <div class="col-12 col-sm-12 form-group text-white">
+              <label for="email">*Business Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                style="
+                  background-color: grey;
+                  border-color: black;
+                  width: 66%;
+                  height: 60%;
+                "
+              />
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <p class="p-text-17 text-white">
+              By checking this box and clicking submit, I hereby consent that
+              Concentrix + Webhelp <br />
+              sends me via email marketing related information with regard to
+              products and services of <br />
+              Concentrix + Webhelp. I understand that, in order to opt-out from
+              receiving such emails in <br />
+              the future, I can use the opt-out mechanism that is described in
+              each such email or by <br />
+              following the instruction in the Concentrix Unsubscribe Policy in
+              the <u> Concentrix + Wehhelp <br />
+                Privacy Statement.</u>
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn rounded-pill sign-up-btn pr-4 pl-4 mt-5 mb-5"
+            style="background-color: #d90166; color: white;"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-12 col-12 p-text-18">
+            <p>
+              Legal Hub | Privacy Policy - BCRc | Risk management and internal and control definition and ovjectives | Cookie Preference Center
+            </p>
+          </div>
+          <div class="col-12 col-12 p-text-18">
+            <p>
+              &copy; 2023. All rights reserved. Site by Granite
+            </p>
+          </div>
+        </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

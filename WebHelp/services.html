@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Customer Care | Business solutions</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/png;base64,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"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div
+        class="col-5 col-sm-10 bg-light"
+        style="text-align: end; display: inline-block"
+      >
+        <p class="text-secondary">
+          <i class="fa fa-search text-secondary"></i>
+          Search
+        </p>
+      </div>
+      <div
+        class="col-7 col-sm-2 bg-light"
+        style="text-align: left; display: inline-block"
+      >
+        <ul>
+          <li class="main-menu">
+            <p class="text-secondary px-3">English &darr;</p>
+            <ul class="sub-menu">
+              <li class="text-secondary">Spanish &rarr;</li>
+              <li class="text-secondary">Albanian &rarr;</li>
+              <li class="text-secondary">Italian &rarr;</li>
+              <li class="text-secondary">Portugese &rarr;</li>
+              <li class="text-secondary">Turkish &rarr;</li>
+              <li class="text-secondary">French &rarr;</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white static-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="https://media.webhelp.com/wp-content/uploads/2023/09/25113735/logo-concentrix-webhelp.svg"
+              alt="..."
+              height="36"
+              style="margin-right: 30px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active main-menu"
+                  aria-current="page"
+                  href="services.html"
+                  >SERVICES</a
+                >
+                <ul>
+                  <li class="sub-menu">Webhelp Services</li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="industries.html">INDUSTRIES</a>
+              </li>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">INSIGHTS</a>
+                  <!-- Sub-menu for INSIGHTS -->
+                  <ul class="sub-menu">
+                    <li class="li-1"><a href="#">&#x2192; News & Articles</a></li>
+                    <li><a href="#">&#x2192; Analyst Recognition and Awards</a></li>
+                    <li><a href="#">&#x2192; Case Studies</a></li>
+                    <!-- Add more sub-menu items as needed -->
+                  </ul>
+                </li>
+                <!-- Add more navigation items as needed -->
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT US</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+            style="margin-left: 100px"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item-1">
+                <a
+                  class="nav-link btn rounded-pill mx-2 pr-4 pl-4"
+                  href="#"
+                  style="
+                    background-color: darkblue;
+                    color: white;
+                    font-weight: bold;
+                  "
+                  >Careers</a
+                >
+              </li>
+              <li class="nav-item-2">
+                <a
+                  class="nav-link btn rounded-pill mx-2 pr-4 pl-4"
+                  href="#"
+                  style="
+                    background-color: #d90166;
+                    color: white;
+                    font-weight: bold;
+                  "
+                  >Let's talk</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row" style="background-color: #013d62">
+      <div class="col-12 col-sm-12">
+        <h1 class="text-white h1-text-8">
+          We enrich customer experiences and build <br />
+          solutions for your business needs.
+        </h1>
+      </div>
+      <div class="col-12 col-sm-12">
+        <button type="button" class="btn buttons-1 rounded-pill pr-4 pl-4">
+          B2B Sales
+        </button>
+        <button type="button" class="btn buttons rounded-pill pr-4 pl-4">
+          CX Design and Strategy
+        </button>
+        <button type="button" class="btn buttons rounded-pill pr-4 pl-4">
+          Data & Analytics
+        </button>
+        <button type="button" class="btn buttons rounded-pill pr-4 pl-4">
+          Regulated, KYC & Payment <br />
+          Services
+        </button>
+      </div>
+      <div class="col-12 col-sm-12">
+        <button type="button" class="btn buttons-2 rounded-pill pr-4 pl-4">
+          Sales Outsourcing
+        </button>
+        <button type="button" class="btn buttons-3 rounded-pill pr-4 pl-4">
+          Generative AI
+        </button>
+        <button type="button" class="btn buttons-4 rounded-pill pr-4 pl-4">
+          Digital Marketing
+        </button>
+        <button type="button" class="btn buttons-5 rounded-pill pr-4 pl-4">
+          Tech, Automation & AI
+        </button>
+      </div>
+      <div class="col-12 col-sm-12">
+        <button type="button" class="btn buttons-6 rounded-pill pr-4 pl-4">
+          Customer Service
+        </button>
+        <button type="button" class="btn buttons-7 rounded-pill pr-4 pl-4">
+          Trust & Safety
+        </button>
+        <button type="button" class="btn buttons-8 rounded-pill pr-4 pl-4">
+          Technical Support
+        </button>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12 col-sm-12">
+        <h1 class="h1-text-9">
+          Brilliant brands demand brilliant experiences.
+        </h1>
+      </div>
+      <div class="col-12 col-sm-12">
+        <p class="p-text-19">
+          That’s why we create exceptional brand advocacy and loyalty. Helping
+          leaders of <br />
+          today and unicorns of tomorrow differentiate and thrive.
+        </p>
+        <p class="p-text-19">
+          From sales to service, and content moderation to credit management,
+          we’re your end-to-end partner across all <br />
+          B2C and B2B customer journeys.
+        </p>
+        <p class="p-text-19">
+          Our talented, imaginative brand ambassadors create incredible,
+          seamless experiences, driving trusted, stronger <br />
+          relationships with brands
+        </p>
+        <p class="p-text-19">
+          Put simply, we’re where you need us, when you need us.
+        </p>
+        <p class="p-text-19">
+          As a business born in the new economy, driven by our entrepreneurial
+          mindset, we don’t think in hardware or <br />
+          software, but mindware. Always consultative, data-driven, and
+          customer-centric, we combine sector expertise, <br />
+          tech and AI, with the talents of thousands of Webhelpers to create
+          solutions tailor-made to your needs.
+        </p>
+        <p class="p-text-19">
+          And if the solution doesn’t exist yet? We’ll create it!
+        </p>
+      </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+      <div class="col-12 col-sm-12">
+        <h1 class="mb-5 find-out-more">
+          <span style="color: #d90166">Find out</span>
+          <span style="color: #013d62">more below</span>
+        </h1>
+      </div>
+
+      <div class="col-12 col-sm-12">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="images/payment.jpg"
+                alt="First slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">
+                  Regulated, KYC & Payment Services
+                </h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/technical-support.webp"
+                alt="Second slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Technical Support</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/digital-marketing.jpeg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Digital Marketing</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/data-and-analysis.webp"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Data and Analytics</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/trust-and-safety-1.jpeg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Trust and Safety</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/technology.webp"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Technology, Automation & AI</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/sales-outsourcing-1.jpeg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Sales outsourcing</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/costumer-outsourcing.webp"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Customer Service Outsourcing</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/generative-ai.jpg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">Generative AI</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/digital-marketing.jpeg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">CX Design & Strategy</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/b2b-sales.jpeg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption">
+                <h3 class="h3-text-3" style="color: #013d62">B2B Sales Outsourcing</h3>
+                <p class="p-text-20" style="color: black">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis aliquid sunt corporis reprehenderit est fugit,
+                  aspernatur sapiente dolores, eaque, ipsam necessitatibus modi
+                  quod! Aspernatur debitis obcaecati similique labore saepe
+                  quasi, voluptatem enim vero facilis rerum commodi veniam
+                  numquam! Amet iste qui maxime, explicabo repellendus
+                  doloribus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row more-news mt-5">
+      <div class="col-12 col-sm-12">
+        <h1 class="our-latest-news mb-5" style="margin-left: 0px;">
+          <span style="color: #013d62;">Our latest</span> 
+          <span style="color: #d90166;">news</span>
+        </h1>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-1.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h4 class="card-title pt-3 pl-3">
+              Mastering multilingual <br />
+              Customer Experience <br />
+              during global expansion: <br />
+              zero to fluent in 4 steps
+            </h4>
+            <p class="gray-p-text pt-3 pl-3 pr-3" style="color: gray">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              quam corporis praesentium temporibus? Dolorum, modi.
+            </p>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-2.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h4 class="card-title pt-3 pl-3">
+              New economy <br />
+              organizations: 5 tips for <br />
+              adopting generative AI <br />
+              while scaling your customer experience
+            </h4>
+            <p class="gray-p-text pt-3 pl-3 pr-3" style="color: gray">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+              odio ducimus incidunt deleniti! Fuga doloremque facilis ducimus.
+            </p>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-3.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h4 class="card-title pt-3 pl-3">Insurance Outsourcing</h4>
+            <p class="gray-p-text pt-3 pl-3 pr-3" style="color: gray">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam aliquam qui dolore nam doloribus nobis aut mollitia?
+              Dolor placeat sunt officia eligendi? Iusto quos perferendis non
+              illo error asperiores voluptate.
+            </p>
+            <a
+              href="#"
+              class="btn"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-4.jpg" alt="Card image" />
+          <div class="card-body-1">
+            <h6
+              class="h6-text-1"
+              style="
+                background-color: #d90166;
+                color: white;
+                width: 25%;
+                margin-left: 17px;
+                margin-top: 20px;
+              "
+            >
+              SOLUTIONS
+            </h6>
+            <h4 class="card-title pt-3 pl-3">
+              Travel trends in 2024 – <br />
+              what’s on the horizon for <br />
+              the global travel industry?
+            </h4>
+            <p class="gray-p-text pt-3 pl-3 pr-3" style="color: gray">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, assumenda? Ab.
+            </p>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 mt-5">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-5.png" alt="Card image" />
+          <div class="card-body-1">
+            <h4 class="card-title pt-3 pl-3">
+              Scaling Customer Support: <br />
+              Blending People and Tech <br />
+              for Digital Growth
+            </h4>
+            <p class="gray-p-text pt-3 pl-3 pr-3" style="color: gray">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              laudantium, obcaecati delectus deserunt animi aspernatur!
+            </p>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-6.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h4 class="card-title pt-3 pl-3">
+              4 Customer Experience <br />
+              risks (and best practices) <br />
+              when expanding to new <br />
+              markets
+            </h4>
+            <p class="gray-p-text pt-3 pl-3" style="color: gray">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam deserunt ex similique aliquid.
+            </p>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 ">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-7.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h6
+              class="h6-text-1"
+              style="
+                background-color: #d90166;
+                color: white;
+                width: 44%;
+                margin-left: 17px;
+                margin-top: 20px;
+              "
+            >
+              RETAIL & E-COMMERCE
+            </h6>
+            <h4 class="card-title pt-3 pl-3">
+              Why Marketplaces Are the <br>
+              Right Fit to Boost the <br>
+              Circular Economy
+            </h4>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 mt-5">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-8.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h6
+              class="h6-text-1"
+              style="
+                background-color: #d90166;
+                color: white;
+                width: 44%;
+                margin-left: 17px;
+                margin-top: 20px;
+              "
+            >
+              RETAIL & E-COMMERCE
+            </h6>
+            <h4 class="card-title pt-3 pl-3">
+              What Will the Eu’s New <br>
+              Digital Services Act Mean <br>
+              for Marketplace <br>
+              Operators?
+            </h4>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 ">
+        <div class="card-1">
+          <img class="card-img-top" src="images/img-9.jpeg" alt="Card image" />
+          <div class="card-body-1">
+            <h6
+              class="h6-text-1"
+              style="
+                background-color: #d90166;
+                color: white;
+                width: 39%;
+                margin-left: 17px;
+                margin-top: 20px;
+              "
+            >
+              HIGHTECH & MEDIA
+            </h6>
+            <h4 class="card-title pt-3 pl-3">
+              Player Experience: Trends & <br>
+              Developments
+            </h4>
+            <a
+              href="#"
+              class="btn pl-3"
+              style="font-size: 35px; color: rgb(0, 206, 206)"
+              >&#x2192;</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12">
+        <button type="button" class="btn see-more pr-4 pl-4">See more</button>
+      </div>
+    </div>
+
+    <div class="container mt-5 bg-color bg-radius">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h1 style="color: white" class="get-in-touch-2">Get in Touch</h1>
+          <p style="color: white" class="p-text-11">
+            We'd really like to help out. Fancy working together or just <br />
+            want to say hi? Drop us a message
+          </p>
+          <div>
+            <div class="form-check form-border text-white">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Business Solutions
+              </label>
+            </div>
+            <div class="form-check form-border text-white">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                HR Enquiries & Career Opportunities
+              </label>
+            </div>
+            <div class="form-check form-border text-white">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Media & Analyst Enquiries
+              </label>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn rounded-pill continue pr-4 pl-4 mt-5 ml-4"
+            style="background-color: #d90166; color: white"
+          >
+            Continue
+          </button>
+        </div>
+        <div class="col-12 col-sm-6">
+          <img
+            class="tablet-girl"
+            width="555px"
+            src="https://media.webhelp.com/wp-content/uploads/2022/11/02232843/contact-form-image.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row bg-color-1 mt-5">
+        <div class="col-12 col-sm-3">
+          <p class="p-text-12 text-white">About us</p>
+          <a href="#" class="a-href-1"> What we do </a>
+          <a href="#" class="a-href-1">
+            Webhelp in your <br />
+            region
+          </a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <p class="p-text-13 text-white">Discover</p>
+          <a href="#" class="a-href-2">All industries</a>
+          <a href="#" class="a-href-2">Our solutions</a>
+          <a href="#" class="a-href-2">News</a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <p class="p-text-14 text-white">Career</p>
+          <a href="#" class="a-href-3">Job search</a>
+          <a href="#" class="a-href-3">Work aboard</a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <p class="p-text-15 text-white">Community</p>
+          <a href="#" class="a-href-4">Contact us</a>
+        </div>
+        <div class="col-12">
+          <p class="p-text-16 text-white mt-5">
+            Subscribe to receive our newsletter
+          </p>
+        </div>
+        <form>
+          <div class="row form-margin">
+            <div class="col-12 col-sm-4 form-group text-white">
+              <label for="firstName">*First Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                style="background-color: grey; border-color: black"
+              />
+            </div>
+            <div class="col-12 col-sm-4 form-group text-white">
+              <label for="lastName">*Last Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                style="background-color: grey; border-color: black"
+              />
+            </div>
+            <div class="col-12 col-sm-12 form-group text-white">
+              <label for="email">*Business Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                style="
+                  background-color: grey;
+                  border-color: black;
+                  width: 66%;
+                  height: 60%;
+                "
+              />
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <p class="p-text-17 text-white">
+              By checking this box and clicking submit, I hereby consent that
+              Concentrix + Webhelp <br />
+              sends me via email marketing related information with regard to
+              products and services of <br />
+              Concentrix + Webhelp. I understand that, in order to opt-out from
+              receiving such emails in <br />
+              the future, I can use the opt-out mechanism that is described in
+              each such email or by <br />
+              following the instruction in the Concentrix Unsubscribe Policy in
+              the <u> Concentrix + Wehhelp <br />
+                Privacy Statement.</u>
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn rounded-pill sign-up-btn pr-4 pl-4 mt-5 mb-5"
+            style="background-color: #d90166; color: white;"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-12 col-12 p-text-18">
+            <p>
+              Legal Hub | Privacy Policy - BCRc | Risk management and internal and control definition and ovjectives | Cookie Preference Center
+            </p>
+          </div>
+          <div class="col-12 col-12 p-text-18">
+            <p>
+              &copy; 2023. All rights reserved. Site by Granite
+            </p>
+          </div>
+        </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
