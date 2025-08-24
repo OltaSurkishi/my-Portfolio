@@ -1,0 +1,699 @@
+.custom-bg {
+  background-image: url("https://images3.alphacoders.com/109/1095585.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+}
+
+.custom-border {
+  border-bottom: 1px solid white;
+}
+
+/* CSS for the initial background color of the navbar */
+.navbar.navbar-light.bg-light {
+  background-color: white !important;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+/* CSS for the dark background color */
+.navbar.bg-dark {
+  background-color: #343a40 !important; /* Change this to your desired dark color */
+}
+
+.find-us {
+  color: white;
+  margin-left: 650px;
+}
+
+.find-us a {
+  list-style-type: none;
+}
+
+.find-us:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Initial styles for the link */
+.find-us {
+  text-decoration: none;
+  position: relative; /* Add relative positioning to the link */
+}
+
+/* Pseudo-element for the sliding underline */
+.find-us::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width is 0, so the line is hidden */
+  height: 1px; /* Make the underline thinner by reducing the height */
+  background-color: white; /* Change the color as needed */
+  transition: width 0.3s ease; /* Add a transition effect for smooth sliding */
+}
+
+/* Hover effect to expand the underline */
+.find-us:hover::before {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
+/* Style for the custom rounded button */
+.rounded-button {
+  display: inline-block;
+  padding: 5px 30px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: white; /* Change this to your desired background color */
+  color: #000000; /* Change this to your desired text color */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Change the button color on hover */
+.rounded-button:hover {
+  background-color: #da4019; /* New background color on hover */
+  text-decoration: none;
+  color: black;
+}
+
+/* LEARN MORE */
+
+.learn-more {
+  color: rgb(0, 0, 0);
+}
+
+.learn-more a {
+  list-style-type: none;
+}
+
+.learn-more:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* Initial styles for the link */
+.learn-more {
+  text-decoration: none;
+  position: relative; /* Add relative positioning to the link */
+}
+
+/* Pseudo-element for the sliding underline */
+.learn-more::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width is 0, so the line is hidden */
+  height: 1px; /* Make the underline thinner by reducing the height */
+  background-color: rgb(255, 0, 0); /* Change the color as needed */
+  transition: width 0.3s ease; /* Add a transition effect for smooth sliding */
+}
+
+/* Hover effect to expand the underline */
+.learn-more:hover::before {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
+/* Custom CSS to connect two images */
+.connected-images {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
+.connected-images img {
+  width: 550px; /* Set the width to make images square and smaller */
+  height: 570px; /* Set the height to maintain a square aspect ratio */
+  float: left;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.grown-with-care p,
+h3 {
+  text-align: left;
+}
+
+.first-img,
+.second-img {
+  width: 100%;
+  max-height: 35rem;
+}
+
+.image-container-1 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-container-1 img {
+  width: 90%;
+  max-width: 35rem;
+  display: block;
+}
+
+
+.text-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.text-img h1, .text-img p {
+  margin: 0;
+}
+
+.shop-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.oishii-img {
+  width: 100%;
+  max-height: 40rem;
+}
+
+.oishii-text {
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.oishii-text p {
+  font-size: 25px;
+  text-align: left;
+}
+
+.bg-color {
+  background-color: rgba(128, 128, 128, 0.118);
+}
+
+.container-relative {
+  position: relative;
+}
+
+.bg-img {
+  background: url("https://oishii.com/cdn/shop/files/210920-OISHI-9614_3_3_1080x.jpg?v=1655850320")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  color: #fff; /* Text color */
+}
+
+.logo-1 {
+  padding-top: 190px;
+  margin-left: 115px;
+}
+
+.logo-1 h3 {
+  text-align: center;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.middle-img {
+  width: 250px;
+}
+
+.text {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.text p {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+/* Custom underline style for find us in store*/
+.store {
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+  color: white; /* Change the color to your desired link color */
+}
+
+.store::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height as needed */
+  background: #ffffff; /* Match the link color */
+  transform: scaleX(0); /* Initial scale to create the animation effect */
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease; /* Transition for the animation effect */
+}
+
+.store:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.store:hover::after {
+  color: #fff;
+  transform: scaleX(1); /* Scale the underline to 100% on hover */
+}
+
+.bg-img-1 {
+  background-image: url("https://c0.wallpaperflare.com/preview/1019/660/985/strawberry-strawberries-red-sweet.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  color: #fff; /* Text color */
+}
+
+.h1-farm {
+  text-align: center;
+  padding-top: 35px;
+  margin-bottom: 25px;
+}
+
+.explore-our-farms {
+  margin-left: 440px;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}
+
+a.explore-our-farms {
+  position: relative;
+  text-decoration: underline;
+  color: white;
+}
+
+a.explore-our-farms::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Adjust the height of the underline as needed */
+  background-color: white; /* Adjust the color as needed */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+a.explore-our-farms:hover::before {
+  width: 100%;
+}
+
+a.explore-our-farms:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.bg-color-1 {
+  background-color: rgb(211, 211, 247);
+}
+
+.h1-text {
+  font-size: 40px;
+}
+
+.p-text {
+  text-align: left;
+  font-size: 18px;
+}
+
+.bg-color-2 {
+  background-color: rgb(238, 238, 238);
+}
+
+.h3-text {
+  text-align: center;
+}
+
+.p1-text {
+  font-size: 20px;
+}
+
+.sign-up-1 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  text-decoration: none;
+  color: #000; /* Set your preferred text color */
+  position: relative;
+  overflow: hidden;
+}
+
+.sign-up-1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: red; /* Set your preferred underline color */
+  height: 1px; /* Set your preferred underline height */
+  transition: right 0.3s;
+}
+
+.sign-up-1:hover::before {
+  right: 0;
+}
+
+.sign-up-1:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.image-container {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-color-3 {
+  background-color: #da4019;
+  height: 450px;
+}
+
+.oishii-footer {
+  margin-left: 25px;
+  margin-top: 40px;
+}
+
+.p-footer {
+  text-align: left;
+  margin-top: 45px;
+  font-size: 25px;
+}
+
+.link-1,
+.link-2,
+.link-3,
+.link-4,
+.link-5,
+.link-6,
+.link-7,
+.link-8,
+.link-9,
+.link-10 {
+  display: block;
+  color: white;
+  font-size: 25px;
+}
+
+/*LINK 1*/
+.link-1 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-1::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-1:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-1:hover::after {
+  width: 25%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 2*/
+.link-2 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-2:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-2:hover::after {
+  width: 45%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 3*/
+.link-3 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-3::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-3:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-3:hover::after {
+  width: 35%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 4*/
+.link-4 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-4::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-4:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-4:hover::after {
+  width: 37%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 5*/
+.link-5 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-5::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-5:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-5:hover::after {
+  width: 13%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 6*/
+.link-6 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-6::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-6:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-6:hover::after {
+  width: 20%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 7*/
+.link-7 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-7::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-7:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-7:hover::after {
+  width: 25%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 8*/
+.link-8 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-8::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-8:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-8:hover::after {
+  width: 18%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 9*/
+.link-9 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-9::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-9:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-9:hover::after {
+  width: 23%; /* Expand the underline to full width on hover */
+}
+
+/*LINK 10*/
+.link-10 {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-10::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Set your preferred underline height */
+  background: rgb(255, 255, 255); /* Set your preferred underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add a transition for the width property */
+}
+
+.link-10:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link-10:hover::after {
+  width: 10%; /* Expand the underline to full width on hover */
+}
+/*END OF LINKS*/
+
+.bg-color-4 {
+  background-color: #da4019;
+  margin-top: 1px;
+}
+
+.footer-img {
+  margin: 15px;
+  margin-left: 20px;
+}
+
+.footer-text {
+  font-size: 25px;
+  margin-top: 10px;
+}
