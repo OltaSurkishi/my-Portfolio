@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hepta</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Creepster&family=Metal+Mania&family=Nosifer&display=swap"
+        rel="stylesheet" />
+
+    <!-- Fonts 2-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/761/761488.png" />
+</head>
+
+<body>
+
+    <div class="h-screen relative">
+        <div
+            class="bg-[url('https://images.unsplash.com/photo-1507475380673-1246fa72eeea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center h-full">
+            <div class="absolute inset-0 opacity-30"></div>
+
+            <!-- Navbar -->
+            <nav
+                class="absolute top-0 left-0 w-full flex items-center justify-between p-4 lg:p-6 text-black lg:text-white z-20 bg-white lg:bg-transparent shadow-md lg:shadow-none">
+                <!-- Logo -->
+                <a href="index.html" class="text-4xl font-bold custom-fonts phones-tablets">
+                    Hepta
+                </a>
+
+                <!-- Menu Button (visible on mobile and tablets) -->
+                <button id="menu-btn" class="block lg:hidden text-3xl focus:outline-none z-30">
+                    ☰
+                </button>
+
+                <!-- Menu Links -->
+                <ul id="menu"
+                    class="hidden flex-col items-center absolute top-full left-0 w-full bg-white lg:bg-transparent lg:relative lg:flex lg:flex-row lg:space-x-8 text-xl z-10 lg:pl-6 lg:justify-end lg:text-white">
+                    <li>
+                        <a href="index.html"
+                            class="py-3 block w-full text-center lg:w-auto hover:text-[#65c0ba] custom-fonts">Home</a>
+                    </li>
+                    <li>
+                        <a href="hotels.html"
+                            class="py-3 block w-full text-center lg:w-auto hover:text-[#65c0ba] custom-fonts">Hotels</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html"
+                            class="py-3 block w-full text-center lg:w-auto hover:text-[#65c0ba] custom-fonts">About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html"
+                            class="py-3 block w-full text-center lg:w-auto hover:text-[#65c0ba] custom-fonts">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="news.html"
+                            class="py-3 block w-full text-center lg:w-auto hover:text-[#65c0ba] custom-fonts">News</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="py-3 block w-full text-center lg:w-auto hover:text-[#65c0ba] custom-fonts">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+                <h1 class="text-white text-7xl font-bold mb-6 custom-fonts custom-fsize-phones">
+                    Gallery
+                </h1>
+                <button onclick="scrollToContent()"
+                    class="mt-8 px-12 py-4 border-2 text-white rounded-lg tracking-widest hover:text-black hover:bg-white transition duration-500 ease-in-out custom-button-phones custom-button-tablet">
+                    LEARN MORE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for toggling the mobile and tablet menu -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script>
+        function scrollToContent() {
+            document.getElementById("content-section").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+    <div id="content-section" class="py-10">
+        <div class="flex flex-wrap justify-center items-center gap-5">
+            <div class="flex flex-wrap justify-center items-center md:mx-10 lg:mt-28 lg:mx-32 gap-5">
+                <!-- Images -->
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1524156868115-e696b44983db?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center items-center md:mx-10 lg:mx-32 gap-5">
+                <!-- Images -->
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1507120366498-4656eaece7fa?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1541513410614-f91348bb4c4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+            </div>
+            <!-- 2 images 50% of the screen -->
+            <div class="flex flex-wrap justify-center items-center md:mx-10 lg:mx-32 gap-5">
+                <div class="w-[90%] sm:w-[48%] lg:w-[48%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1477120128765-a0528148fed2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[48%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1512425296298-43a8c196eeed?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center items-center md:mx-10 lg:mx-32 gap-5">
+                <!-- Images -->
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1502933691298-84fc14542831?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1522787345986-d5c7885a889e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+                <div class="w-[90%] sm:w-[48%] lg:w-[23%] flex justify-center my-2">
+                    <img src="https://images.unsplash.com/photo-1524156868115-e696b44983db?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#1A1A1A] lg:mt-[120px] ">
+        <div class="flex flex-col lg:flex-row mx-5 md:mx-2 lg:mx-22 border-b-2 border-white">
+            <div class="text-white flex flex-col items-start mx-5 md:mx-20 lg:mx-20 lg:w-1/4 lg:mb-28">
+                <h1 class="custom-fonts text-xl lg:text-2xl mb-4 mt-10 lg:mt-28">Quick Link</h1>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">About
+                    Us</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Terms
+                    & Conditions</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Privacy
+                    Policy</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Help</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Rooms</a>
+            </div>
+
+            <div class="text-white flex flex-col items-start mx-5 md:mx-20 lg:mx-20 lg:w-1/4 lg:mb-28">
+                <h1 class="custom-fonts text-xl lg:text-2xl mb-4 mt-10 lg:mt-28">Support</h1>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Our
+                    Location</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">The
+                    Hosts</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">About</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Contact</a>
+                <a href="#"
+                    class="text-xl lg:text-[18px] font-thin text-[#808080] hover:text-[#A9A9A9] transition duration-300 ease-in-out py-[5px] lg:py-1 custom-fonts-2">Restaurant</a>
+            </div>
+
+            <div class="text-white flex flex-col items-start mx-5 md:mx-20 lg:mx-20 lg:w-1/4 lg:mb-28">
+                <h1 class="custom-fonts text-xl lg:text-2xl mb-4 mt-10 lg:mt-28">Contact Info</h1>
+                <div class="font-thin lg:text-l custom-fonts-2">
+                    <p class="italic">Address:</p>
+                    <p class="text-[#808080]">98 West 21th Street, Suite 721 New York NY 10016</p>
+                </div>
+                <div class="font-thin lg:mt-1 lg:text-l custom-fonts-2">
+                    <p class="italic">Phone:</p>
+                    <p class="text-[#808080]">(+1) 435 3533</p>
+                </div>
+                <div class="font-thin lg:mt-1 lg:text-l custom-fonts-2">
+                    <p class="italic">Email:</p>
+                    <p class="text-[#808080]">info@yourdomain.com</p>
+                </div>
+            </div>
+
+            <div class="text-white flex flex-col items-start mx-5 md:mx-20 lg:mx-20 lg:w-1/4 lg:mb-28 md:mb-28 mb-28">
+                <h1 class="custom-fonts text-xl lg:text-2xl mb-4 mt-10 lg:mt-28">Support</h1>
+                <p class="text-[#808080] lg:text-l custom-fonts-2 font-thin">Sign up for our newsletter</p>
+                <form class="flex items-center border-b border-gray-500 pb-1 lg:mt-10 md:mt-5 mt-3">
+                    <input type="email" placeholder="Your email..."
+                        class="bg-transparent italic w-full focus:outline-none text-gray-300 text-[#808080]">
+                    <button type="submit" class="text-gray-300 hover:text-white ml-2">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2161/2161491.png" alt="Send" class="w-6">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
