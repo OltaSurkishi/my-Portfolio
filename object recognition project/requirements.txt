@@ -1,0 +1,4 @@
+#Librari qe nevojitet ne aplikacionin Flask
+Flask
+#Librari qe nevojiten per komunikim ne kohe reale me Flask
+flask-socketio

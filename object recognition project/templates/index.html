@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-time Chat</title>
+    <!-- Pjesa e meposhtme eshte per te importuar skripten e Socket.IO per komunikim ne kohe reale -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="/static/script.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: #333;
+      }
+      #chat-container {
+        width: 60%;
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      #messages {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      #messages li {
+        padding: 8px 10px;
+        border-bottom: 1px solid #eee;
+      }
+      #message-input {
+        display: flex;
+      }
+      #message {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px 0 0 4px;
+      }
+      button {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 0 4px 4px 0;
+        background-color: #28a745;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Real-time Chat</h1>
+    <div id="chat-container">
+      <ul id="messages"></ul>
+      <div id="message-input">
+        <input id="message" autocomplete="off" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </body>
+</html>
