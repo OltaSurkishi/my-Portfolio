@@ -1,0 +1,22 @@
+<html>
+
+	<!--Forma per llogim-->
+
+<form id="form1" method="post" action="check_login.php">
+<h4>Username:	
+<input name="usr" type="text" size="15" />
+</h4>
+<br />
+<h4>Password:<br>
+<input name="pass" type="password" size="15">
+</input></h4>
+<p> 
+<input name="login" type="submit" value="login" class="submit" />
+ </p>
+</form>
+	</blockquote>
+   </div>
+</div>
+ <!-- fundi i elementit #menuA -->
+
+</html>
