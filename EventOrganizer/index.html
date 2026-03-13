@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EventNest</title>
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2273/2273225.png">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-purple-50 to-indigo-100 min-h-screen p-6">
+
+<div class="max-w-5xl mx-auto">
+  <!-- Header -->
+  <header class="mb-6 text-center flex flex-col items-center">
+    <img src="https://cdn-icons-png.flaticon.com/128/2273/2273225.png" alt="Logo" class="w-16 h-16 mb-2">
+    <h1 class="text-4xl font-bold text-purple-700 mb-1">EventNest</h1>
+    <p class="text-gray-700">Gjej ose regjistro eventin tënd!</p>
+  </header>
+
+  <!-- Search -->
+  <input id="search" type="text" placeholder="Search title/location" class="mb-6 p-3 rounded shadow w-full border border-gray-300">
+
+  <!-- Eventet -->
+  <div id="events" class="grid md:grid-cols-2 gap-6"></div>
+
+  <!-- Form për të shtuar evente të reja -->
+  <div class="mt-10 mb-6 p-4 bg-white rounded shadow">
+    <h2 class="text-xl font-semibold mb-4">Shto Event të Ri</h2>
+    <form id="addEventForm" class="grid gap-3 md:grid-cols-2">
+      <input type="text" placeholder="Titulli i eventit" id="newTitle" class="px-3 py-2 border rounded w-full md:col-span-2" required>
+      <input type="date" id="newDate" class="px-3 py-2 border rounded">
+      <input type="time" id="newTime" class="px-3 py-2 border rounded">
+      <input type="text" placeholder="Lokacioni" id="newLocation" class="px-3 py-2 border rounded">
+      <input type="number" min="1" placeholder="Kapaciteti" id="newCapacity" class="px-3 py-2 border rounded">
+      <select id="newType" class="px-3 py-2 border rounded">
+        <option>Public</option>
+        <option>Private</option>
+        <option>Paid</option>
+      </select>
+      <textarea placeholder="Përshkrimi" id="newDescription" class="px-3 py-2 border rounded md:col-span-2"></textarea>
+      <input type="text" placeholder="Foto URL (opsionale)" id="newImage" class="px-3 py-2 border rounded md:col-span-2">
+      <button type="submit" class="md:col-span-2 bg-green-600 hover:bg-green-700 text-white py-2 rounded font-semibold">Shto Event</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Lexo eventet nga localStorage ose vendos eventet fillestare
+const storedEvents = localStorage.getItem('events');
+const events = storedEvents ? JSON.parse(storedEvents) : [
+  {id:'1', title:'Piknik në Park', date:'2025-12-07', time:'16:00', location:'Parku Qendror', capacity:30, attendees:5, description:'Takim i lehtë dhe lojëra', type:'Public', image:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'2', title:'Workshop Fotografimi', date:'2025-12-07', time:'10:00', location:'Studio X', capacity:12, attendees:2, description:'Mëso bazat e fotografisë', type:'Paid', image:'https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'3', title:'Kafe me miqtë', date:'2025-12-07', time:'18:00', location:'Café Roma', capacity:15, attendees:3, description:'Kalim i këndshëm dhe biseda', type:'Public', image:'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'4', title:'Seminar Shëndeti', date:'2025-12-07', time:'09:00', location:'Auditorium', capacity:50, attendees:10, description:'Mëso rreth stilit të shëndetshëm', type:'Free', image:'https://images.unsplash.com/photo-1639527924446-3edc522ae4b0?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'5', title:'Yoga në Natyrë', date:'2025-12-07', time:'07:00', location:'Parku Botanik', capacity:20, attendees:5, description:'Relakso trupin dhe mendjen', type:'Paid', image:'https://images.unsplash.com/photo-1588286840104-8957b019727f?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'6', title:'Klas Muzike', date:'2025-12-07', time:'14:00', location:'Studio Muzikore', capacity:10, attendees:1, description:'Mëso instrumentin tënd të preferuar', type:'Paid', image:'https://images.unsplash.com/photo-1758380742154-44738eb92832?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'7', title:'Shëtitje në Mal', date:'2025-12-07', time:'08:00', location:'Mali i Dajtit', capacity:25, attendees:8, description:'Eksploro natyrën me shoqëri', type:'Public', image:'https://images.unsplash.com/photo-1592859600972-1b0834d83747?auto=format&fit=crop&w=800&q=80', userCreated:false},
+  {id:'8', title:'Festival Ushqimesh', date:'2025-12-07', time:'12:00', location:'Sheshi Qendror', capacity:40, attendees:15, description:'Shijoni ushqime nga kuzhina të ndryshme', type:'Public', image:'https://images.unsplash.com/photo-1760815009344-bcf7f7bff5ac?auto=format&fit=crop&w=800&q=80', userCreated:false}
+];
+
+const eventsContainer = document.getElementById('events');
+
+// Funksioni për të ruajtur eventet në localStorage
+function saveEvents() {
+  localStorage.setItem('events', JSON.stringify(events));
+}
+
+// Funksioni për të fshirë një event të krijuar nga përdoruesi
+function deleteEvent(id) {
+  const index = events.findIndex(ev => ev.id === id && ev.userCreated);
+  if(index !== -1){
+    events.splice(index,1);
+    saveEvents();
+    renderEvents(filteredEvents());
+  }
+}
+
+// Funksioni për të renderuar eventet
+function renderEvents(list) {
+  eventsContainer.innerHTML = '';
+  list.forEach(ev => {
+    const card = document.createElement('div');
+    card.className = "bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow";
+    
+    // Fillon HTML e eventit
+    let cardHTML = `
+      <img src="${ev.image}" alt="${ev.title}" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-semibold mb-1">${ev.title}</h2>
+        <p class="text-sm text-gray-500">${ev.date} ${ev.time} • ${ev.location}</p>
+        <p class="mt-2 text-gray-700 text-sm">${ev.description}</p>
+        <p class="mt-2 text-xs text-gray-500">${ev.attendees}/${ev.capacity} pjesëmarrës • ${ev.type}</p>
+        <div class="flex gap-2 mt-3">
+          <button class="flex-1 py-2 rounded-lg font-semibold ${ev.attendees >= ev.capacity ? 'bg-gray-300 text-gray-700' : 'bg-purple-600 hover:bg-purple-700 text-white'}" ${ev.attendees >= ev.capacity ? 'disabled' : ''}>Merr pjesë</button>
+    `;
+
+    // Shto butonin "Fshi" vetëm për eventet që i ka krijuar përdoruesi
+    if(ev.userCreated){
+      cardHTML += `<button class="flex-1 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg font-semibold">Fshi</button>`;
+    }
+
+    cardHTML += `</div></div>`;
+    card.innerHTML = cardHTML;
+
+    // Butoni "Merr pjesë"
+    const attendBtn = card.querySelector('button:first-child');
+    attendBtn.addEventListener('click', () => {
+      if(ev.attendees < ev.capacity) {
+        ev.attendees++;
+        saveEvents();
+        renderEvents(filteredEvents());
+      }
+    });
+
+    // Butoni "Fshi" vetëm nëse ekziston
+    const deleteBtn = card.querySelector('button:last-child');
+    if(deleteBtn && ev.userCreated){
+      deleteBtn.addEventListener('click', () => {
+        if(confirm(`Dëshiron të fshish eventin "${ev.title}"?`)){
+          deleteEvent(ev.id);
+        }
+      });
+    }
+
+    eventsContainer.appendChild(card);
+  });
+}
+
+// Filter për kërkim
+function filteredEvents() {
+  const q = document.getElementById('search').value.toLowerCase();
+  return events.filter(ev => ev.title.toLowerCase().includes(q) || ev.location.toLowerCase().includes(q));
+}
+
+document.getElementById('search').addEventListener('input', () => {
+  renderEvents(filteredEvents());
+});
+
+// Form për të shtuar event të ri
+document.getElementById('addEventForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const newEvent = {
+    id: Date.now().toString(),
+    title: document.getElementById('newTitle').value,
+    date: document.getElementById('newDate').value || '2025-12-07',
+    time: document.getElementById('newTime').value || '12:00',
+    location: document.getElementById('newLocation').value,
+    capacity: parseInt(document.getElementById('newCapacity').value) || 20,
+    attendees: 0,
+    description: document.getElementById('newDescription').value,
+    type: document.getElementById('newType').value,
+    image: document.getElementById('newImage').value || 'https://images.unsplash.com/photo-1524492449090-1a2fcd06a9a0?auto=format&fit=crop&w=800&q=80',
+    userCreated: true // shënojmë që është krijuar nga përdoruesi
+  };
+  events.push(newEvent);
+  saveEvents();
+  renderEvents(filteredEvents());
+  document.getElementById('addEventForm').reset();
+});
+
+// Render fillestar i eventeve
+renderEvents(events);
+</script>
+
+</body>
+</html>
