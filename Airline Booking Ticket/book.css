@@ -1,0 +1,122 @@
+/*BOOK*/
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('Images/airline.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.booking-form-box{
+    max-width: 350px;
+    border: 2px solid #ced4da;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 10% auto 0;
+}
+
+.radio-btn{
+    margin: 5 20px;
+}
+
+.radio-btn .btn1{
+    margin-right: 2px;
+}
+
+.radio-btn .btn2{
+    margin-right: 2px;
+}
+
+.radio-btn .btn::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: -2px;
+    left: -4px;
+    background-color: #ffffff;
+    position: relative;
+    display: inline-block;
+    border: 3px solid #ffffff;
+    visibility: visible;
+    border-radius: 50%;
+}
+
+.radio-btn .btn:checked::after{
+    content: '';
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.radio-btn span{
+    color: #000000;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.booking-form{
+    padding: 0 20px 20px;
+}
+
+.booking-form label{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+
+input::placeholder{
+    color: #000000 !important;
+}
+
+.input-grp{
+    width: 151px;
+    display: inline-block;  
+}
+
+.form-control{
+    font-size: 12px !important;
+    border-radius: 0 !important;
+    color: #000000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.select-date::-webkit-inner-spin-button,
+.select-date::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.select-date::-webkit-inner-calender-picker-indicator{
+    background: transparent !important;
+}
+
+.custom-select{
+    color: #000000!important;
+    font-size: 12px!important; 
+    border: 1px solid #ced4da!important;
+    box-shadow: none!important;
+    border-radius: 0!important;
+    background: transparent!important;
+}
+
+.custom-select option{
+    color: #333;
+}
+
+.flight{
+    width: 100%;
+    padding: 9px 0!important;
+    font-size: 12px!important;
+    border: 1px solid #ced4da !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.flight{
+    background-color: #000;
+}
+.flight:hover{
+    background: #ff6200 !important;
+    color: #000000!important;
+    transition: 0.1s;
+}

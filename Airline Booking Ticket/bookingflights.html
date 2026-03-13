@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Booking</title>
+  <style>
+    .btn-blue {
+      background-color: #02122c;
+    }
+
+    .bg-blue {
+      background-color: #02122c;
+    }
+
+    .bg-gray {
+      background-color: #dddde5;
+    }
+
+    .btn-gray {
+      background-color: #dddde5;
+    }
+
+    .fs-8 {
+      font-size: 12px;
+    }
+
+    .flightImg {
+      background-image: url(Images/airline.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .btn-green {
+      background-color: #00a698;
+    }
+
+    .bg-sm-blue {
+      background-color: #042759;
+    }
+  </style>
+</head>
+
+<body>
+  <!--BUTTONS-->
+  <div class="container pt-3">
+    <div class="row d-flex jusitify-content-between">
+      <div class="col-lg-5">
+        <div class="d-flex flex-column">
+          <h5 class="text-primary fw-bold">Skyscanner</h5>
+          <div class="d-flex align-items-center pt-3">
+            <div class="btn btn-blue fw-bold text-white">Flights</div>
+            <div class="btn btn-primary fw-bold mx-1">Hotels</div>
+            <div class="btn btn-primary fw-bold">Car Rental</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="d flex align-items-center">
+          <p class="text-primary m-0 fs-8">Help</p>
+          <input type="text" placeholder="English {US} United States $USD"
+            class="form-contro bg-gray rounded-3 border-0 mx-2 fs-8 w-50 py-2" />
+          <div class="btn btn-gray text-primary fw-bold rounded-3 py-1">
+            Log in
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--BUTTONS END-->
+
+  <!--FLIGHT DETAILS-->
+  <!--LG/MD-->
+  <div class="flightImg d-none d-md d-xl-flex flex-column">
+    <h1 class="text-white fw-bold" style="font-size: 55px; padding: 7% 0 2% 16%">
+      Let the journey begin
+    </h1>
+    <div class="container-fluid" style="padding-bottom: 22%">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 bg-blue p-4 rounded-1">
+          <div class="d-flex flex-column">
+            <!--RADIO BUTTONS-->
+            <div class="d-flex align-items-center text-white fw-bold">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" checked />
+                <label class="form-check-label" for="flexRadioDisabled">
+                  Roundtrip
+                </label>
+              </div>
+              <div class="form-check mx-4">
+                <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+                <label class="form-check-label" for="flexRadioCheckedDisabled">
+                  One way
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+                <label class="form-check-label" for="flexRadioCheckedDisabled">
+                  Multi-city
+                </label>
+              </div>
+            </div>
+            <!--RADIO BUTTONS END-->
+
+            <!--INPUT FIELDS-->
+            <div class="d-flex align-items-center py-2">
+              <!--FROM-->
+              <div>
+                <label for="exampleDataList" class="form-label mb-0 text-white fs-8 fw-bold">From</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                  placeholder="County, city or airport" />
+                <datalist id="datalistOptions">
+                  <option value="San Francisco"></option>
+                  <option value="New York"></option>
+                  <option value="Seattle"></option>
+                  <option value="Los Angeles"></option>
+                  <option value="Chicago"></option>
+                </datalist>
+              </div>
+              <!--FROM END-->
+
+              <!--TO-->
+              <div>
+                <label for="exampleDataList" class="form-label mb-0 text-white fs-8 fw-bold">To</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                  placeholder="County, city or airport" />
+                <datalist id="datalistOptions">
+                  <option value="San Francisco"></option>
+                  <option value="New York"></option>
+                  <option value="Seattle"></option>
+                  <option value="Los Angeles"></option>
+                  <option value="Chicago"></option>
+                </datalist>
+              </div>
+              <!--TO END-->
+
+              <!--DEPARTURE-->
+              <div>
+                <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Depart</label>
+                <input type="date" class="form-control">
+              </div>
+              <!--DEPARTURE END-->
+
+              <!--RETURN-->
+              <div>
+                <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Return</label>
+                <input type="date" class="form-control">
+              </div>
+              <!--RETURN END-->
+
+              <!--CABIN CLASS-->
+              <div>
+                <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Cabin Class & Travellers</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>1 adult, Economy</option>
+                  <option value="1">Premium Economy</option>
+                  <option value="2">Buissness Class</option>
+                  <option value="3">First Class</option>
+                </select>
+              </div>
+              <!--CABIN CLASS END-->
+
+              <!--INPUT FIELDS-->
+              <div class="d-flex align-items-center py-2"></div>
+              <!--INPUT FIELDS END-->
+
+              <!--CHECK BUTTONS-->
+              <div class="d-flex align-items-center jusitify-content-between pt-2">
+                <div class="d-flex flex-column">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label fs-8 text-white fw-bold for=" flexCheckDefault">
+                      Add Nearby Airports
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label fs-8 text-white fw-bold" for="flexCheckChecked">
+                      Non-stop flight only
+                    </label>
+                  </div>
+                </div>
+                <div class="btn btn-green fs-5 fw-bold text-white">Search Flights &#8594;</div>
+              </div>
+
+              <!--CHECK BUTTONS END-->
+            </div>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </div>
+    </div>
+    <!--LG>MD END-->
+
+    <!--SM-->
+    <div class="d-flex d-md-flex d-xl-flex flex-column"></div>
+    <!--RADIO-->
+    <div class="d-flex align-items-center text-white fw-bold">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" checked />
+        <label class="form-check-label" for="flexRadioDisabled">
+          Roundtrip
+        </label>
+      </div>
+      <div class="form-check mx-4">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+        <label class="form-check-label" for="flexRadioCheckedDisabled">
+          One way
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+        <label class="form-check-label" for="flexRadioCheckedDisabled">
+          Multi-city
+        </label>
+      </div>
+    </div>
+    <!--RADIO BUTTONS-->
+
+    <!--INPUT FIELDS-->
+    <div>
+      <label for="exampleDataList" class="form-label mb-0 text-white fs-8 fw-bold">From</label>
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="County, city or airport" />
+      <datalist id="datalistOptions">
+        <option value="San Francisco"></option>
+        <option value="New York"></option>
+        <option value="Seattle"></option>
+        <option value="Los Angeles"></option>
+        <option value="Chicago"></option>
+      </datalist>
+    </div>
+    <!--INPUT FIELDS END-->
+
+
+    <!--DEPART/RETURN-->
+    <div class="d-flex align-items-center jusitify-content-between">
+      <div>
+        <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Depart</label>
+        <input type="date" name="" id="" class="form-control">
+      </div>
+      <div>
+        <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Return</label>
+        <input type="date" name="" id="" class="form-control">
+      </div>
+    </div>
+    <!--DEPART/RETURN END-->
+
+    <!--CABIN CLASS-->
+    <div>
+      <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Cabin Class & Travellers</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>1 adult, Economy</option>
+        <option value="1">Premium Economy</option>
+        <option value="2">Buissness Class</option>
+        <option value="3">First Class</option>
+      </select>
+    </div>
+    <!--CABIN CLASS END-->
+
+    <!--BUTTON-->
+    <div class="btn btn-green fs-5 fw-bold text-white mt-3">Search Flights &#8594</div>
+    <!--BUTTON END-->
+  </div>
+  <!--SM END-->
+  <!--FLIGHT DETAILS END-->
+
+  <!--HOTELS AND CAR RENTAL-->
+  <div class="container pc-5" style="margin-top: 5%; margin-bottom: 5%;">
+    <h3>Plan your next staycation</h3>
+    <div class="d-flex align-items-center jusitify-content-between pt-3">
+      <div>
+        <div class="btn btn-primary rounded-pill fs-8">Las Vegas</div>
+        <div class="btn btn-primary rounded-pill fs-8">New York</div>
+        <div class="btn btn-primary rounded-pill fs-8">Orlando</div>
+        <div class="btn btn-primary rounded-pill fs-8">Miami</div>
+        <div class="btn btn-primary rounded-pill fs-8">Los Angeles</div>
+      </div>
+      <div class="btn btn-link fs-8">View More Hotels</div>
+    </div>
+  </div>
+  <!--HOTELS AND CAR RENTAL END-->
+
+  <!--HOTELS LG/MD-->
+  <div class="container-fluid d-none d-md-flex flex-column">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 d-flex">
+        <div class="card border-0 " style="width: 18rem;">
+          <img src="Images/hotel_1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-subtitle mb-2 text-muted fs-8">Las Vegas, United States</div>
+            <h5 class="card-title">Trump International Hotel Las Vegas</h5>
+            <div class="d-flex align-items-center jusitify-content-between">
+              <div>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+              </div>
+              <p class="card-text text-dark">$54 <span class="fs-8">Per Night</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="card border-0 mx-2" style="width: 18rem;">
+    <img src="Images/hotel_2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="card-subtitle mb-2 text-muted fs-8">Las Vegas, United States</div>
+      <h5 class="card-title">Trump International Hotel Las Vegas</h5>
+      <div class="d-flex align-items-center jusitify-content-between">
+        <div>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+        </div>
+        <p class="card-text text-dark">$54 <span class="fs-8">Per Night</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card border-0 " style="width: 18rem;">
+    <img src="Images/hotel_3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="card-subtitle mb-2 text-muted fs-8">Las Vegas, United States</div>
+      <h5 class="card-title">Trump International Hotel Las Vegas</h5>
+      <div class="d-flex align-items-center jusitify-content-between">
+        <div>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+        </div>
+        <p class="card-text text-dark">$54 <span class="fs-8">Per Night</span></p>
+      </div>
+    </div>
+  </div>
+  <!--HOTELS LG/MD END-->
+
+  <!--CAR RENTAL LD/MD-->
+  <div class="container-fluid mt-5 d-none d-md-flex flex-column">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 d-flex">
+        <div class="card border-0 " style="width: 18rem;">
+          <img src="Images/car_1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-subtitle mb-2 text-muted fs-8">Las Vegas, United States</div>
+            <h5 class="card-title">Trump International Hotel Las Vegas</h5>
+            <div class="d-flex align-items-center jusitify-content-between">
+              <div>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+              </div>
+              <p class="card-text text-dark">$54 <span class="fs-8">Per Night</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="card border-0 mx-2" style="width: 18rem;">
+    <img src="Images/car_2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="card-subtitle mb-2 text-muted fs-8">Las Vegas, United States</div>
+      <h5 class="card-title">Trump International Hotel Las Vegas</h5>
+      <div class="d-flex align-items-center jusitify-content-between">
+        <div>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+        </div>
+        <p class="card-text text-dark">$54 <span class="fs-8">Per Night</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card border-0 " style="width: 18rem;">
+    <img src="Images/car_3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="card-subtitle mb-2 text-muted fs-8">Las Vegas, United States</div>
+      <h5 class="card-title">Trump International Hotel Las Vegas</h5>
+      <div class="d-flex align-items-center jusitify-content-between">
+        <div>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+        </div>
+        <p class="card-text text-dark">$54 <span class="fs-8">Per Night</span></p>
+      </div>
+    </div>
+  </div>
+  <!--CAR RENTAL LD/MD END-->
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

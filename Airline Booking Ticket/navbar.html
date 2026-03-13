@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Airline Booking Ticket</title>
+    <!--Logo-->
+    <link rel="icon" href="Images/web_logo.png" type="image/png" />
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="navbar.html">airline</a></div>
+            <ul class="links">
+                <li><a href="navbar.html">Home</li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="#">Flights</a></li>
+            </ul>
+            <a href="#" class="action_btn">Sign Up</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+                <li><a href="navbar.html">Home</li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="#">Flights</a></li>
+                <li><a href="#" class="action_btn">Sign Up</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+                Sed, cupiditate.</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+
+</body>
+</html>
